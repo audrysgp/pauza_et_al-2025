@@ -1,4 +1,4 @@
-# Title
+# Pauza_et_al-2025
 ## Outline
 
 1. **MaxProject_split channels_multipleInputFolders.ijm** \
