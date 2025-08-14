@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ## MaxProject_split channels_multipleInputFolders.ijm\
+This ImageJ/FiJi script allows for the selection of multiple input directories containing hyper stack (Z-series, multi channel) images. These images are flattened (using the maximum intensity projection), split into single channel images, and saved as .tiff with an \'93MAX_*_C?.tif\'94 extension to the selected output directory.\
+\
+\
+\
+## DeconvolutionLab2_setScale_16bit_saveTiff_checksIftheFileAlreadyExists_waitForVaryingTime_inputFilesinthesameFolder_C1only_showProgressBar_c4.ijm\
+\
+This ImageJ/FiJi script process looks for images of a specific channel and feeds them to be deconvolved.\
+\
+Sets the same scale for the deconvolved image as the original.\
+\
+This script using Richardson-Lucy (RL) algorithm set for 25 iterations. This can be easely changed by changing the setting in Line 58.\
+\
+The code checks if deconvolved image (\'93Final Display of RL\'94) has been generated every 10s. Once the image is found it is then set to 16-bit (from default output of 32-bit), set the original scale, and saved as .tiff with \'93*_deconvolved.tif\'94 extension.\
+\
+\
+\
+## \
+Merge_4channels_intoComposite_differentInputDirectories_checkIfexists.ijm\
+This ImageJ/FiJi script takes single channel images outputted from DeconvolutionLab2, looks for matching names (skips if the image name already exists in the output directory), merges four single-channel images into a single multi-channel image, and saved as .tiff with an \'93*_sombined.tif\'94 extension to the selected output directory.\
+\
+\
+## Measure_area_CB_oneImageAtTime.ijm\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 This ImageJ/FiJi script semi-automate Carotid Body manual selection. \
+- It first opens a composite image from the preselected input directory (one at the time).\
+- The script then auto-contrast selected channels (Lines 31-38) and \
+\
+\
+\
+\
+\
+https://github.com/Townsend-Lab-Yale/glioma_CES }
